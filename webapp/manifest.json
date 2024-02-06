@@ -1,0 +1,137 @@
+{
+    "_version": "1.59.0",
+    "sap.app": {
+        "id": "com.spaiens.fancybook",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.12.3",
+            "toolsId": "3815b161-70b4-4938-a53a-0effc5ea9a9b"
+        },
+        "dataSources": {
+            "Z_DDBOOKS_CDS_Annotation": {
+                "uri": "/destinations/sh0_010/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='Z_DDBOOKS_CDS_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/Z_DDBOOKS_CDS_Annotation.xml"
+                }
+            },
+            "Z_DDBOOKS_CDS": {
+                "uri": "/sap/opu/odata/sap/Z_DDBOOKS_CDS",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "Z_DDBOOKS_CDS_Annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "dependencies": {
+            "minUI5Version": "1.120.5",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.spaiens.fancybook.i18n.i18n"
+                }
+            },
+            "books": {
+                "preload": true,
+                "dataSource": "Z_DDBOOKS_CDS",
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.spaiens.fancybook.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteBook",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetBook"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetBook": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Book",
+                    "viewName": "Book"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.spaiens.fancybook.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    }
+}
