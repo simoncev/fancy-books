@@ -20,10 +20,6 @@ server:
             url: http://sh0100:44300
             client: '010'
             destination: sh0_010
-          - path: /sap
-            url: http://sh0100:44300
-            client: '010'
-            destination: sh0_010
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
