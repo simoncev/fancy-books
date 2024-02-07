@@ -10,10 +10,10 @@
     >
         <content>
             <Table
-                noDataText="Drop column list items here and columns in the area above"
+                noDataText="No Data in table"
                 id="bookList"
                 headerText="Fancy Books"
-                items="{books>/Z_DDBOOKS}"
+                items="{books>/ZBOOKS_DETAILSSet}"
             >
                 <headerToolbar>
                     <OverflowToolbar>

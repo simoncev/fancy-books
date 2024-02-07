@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZBOOKS_DETAILS_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZBOOKS_DETAILS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mandt"/>
+                </Key>
+                <Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Client"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Book"/>
+                <Property Name="Link" Type="Edm.String" Nullable="false" MaxLength="250"/>
+            </EntityType>
+            <EntityContainer Name="ZBOOKS_DETAILS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZBOOKS_DETAILSSet" EntityType="ZBOOKS_DETAILS_SRV.ZBOOKS_DETAILS" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://sh0100:44300/sap/opu/odata/sap/ZBOOKS_DETAILS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://sh0100:44300/sap/opu/odata/sap/ZBOOKS_DETAILS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
