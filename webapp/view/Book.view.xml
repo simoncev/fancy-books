@@ -1,6 +1,7 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
     controllerName="com.spaiens.fancybook.controller.Book"
     displayBlock="true"
 >
@@ -24,7 +25,6 @@
                                 width="20%"
                                 search=".onSearch"
                             />
-                            
                         </content>
                     </OverflowToolbar>
                 </headerToolbar>
@@ -34,15 +34,17 @@
                         id="item0"
                     >
                         <cells>
-                            <Text
+                            <Link
                                 text="{books>Name}"
+                                target="_blank"
+                                href="{books>Link}"
                                 id="text2"
                             />
+
                             <Text
                                 text="{books>Link}"
-                                id="text3"
-                            />
-                            
+                                id="text31">
+                            </Text>
                         </cells>
                     </ColumnListItem>
                 </items>
@@ -63,7 +65,6 @@
                             />
                         </header>
                     </Column>
-                    
                 </columns>
             </Table>
         </content>
