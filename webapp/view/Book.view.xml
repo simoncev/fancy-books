@@ -38,12 +38,11 @@
                                 text="{books>Name}"
                                 target="_blank"
                                 href="{books>Link}"
-                                id="text2"
+                                id="text1"
                             />
-
                             <Text
                                 text="{books>Link}"
-                                id="text31">
+                                id="text2">
                             </Text>
                         </cells>
                     </ColumnListItem>
