@@ -9,16 +9,16 @@
     "sapui5"
   ],
   "main": "webapp/index.html",
-  "dependencies": {},
   "devDependencies": {
-    "@ui5/cli": "^3.7.0",
+    "@sap-ux/eslint-plugin-fiori-tools": "^0.3.0",
     "@sap/ux-ui5-tooling": "^1.11.2",
     "@sapui5/types": "~1.120.0",
-    "ui5-tooling-transpile": "^3.2.0",
-    "typescript": "^5.1.6",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
-    "@sap-ux/eslint-plugin-fiori-tools": "^0.3.0"
+    "@ui5/cli": "^3.7.0",
+    "typescript": "^5.1.6",
+    "ui5-control-generator": "^1.0.4",
+    "ui5-tooling-transpile": "^3.2.0"
   },
   "scripts": {
     "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#comspaiensfancybook-display\"",
@@ -33,7 +33,12 @@
     "start-noflp": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
     "start-variants-management": "fiori run --open \"preview.html?sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
     "unit-tests": "fiori run --open 'test/unit/unitTests.qunit.html'",
-    "int-tests": "fiori run --open 'test/integration/opaTests.qunit.html'"
+    "int-tests": "fiori run --open 'test/integration/opaTests.qunit.html'",
+    "control:generate": "ui5-control-generator --t TS --ns com.sapiens.fancybook.Video --p control",
+    "watch:controls": "npx @ui5/ts-interface-generator --watch"
   },
-  "sapuxLayer": "CUSTOMER_BASE"
+  "sapuxLayer": "CUSTOMER_BASE",
+  "dependencies": {
+    "@ui5/ts-interface-generator": "^0.8.1"
+  }
 }

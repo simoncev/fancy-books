@@ -20,6 +20,8 @@
                     <OverflowToolbar>
                         <content>
                             <ToolbarSpacer />
+                            <CheckBox id = "isDownloadId" text="Download link" selected="{bookModel>/ui/download}" 
+                             select=".checkDownload"/>
                             <SearchField
                                 id="searchField"
                                 width="20%"
@@ -38,12 +40,20 @@
                                 text="{books>Name}"
                                 target="_blank"
                                 href="{books>Link}"
-                                id="text1"
+                                id="bookLink"
+                                enabled="{=${books>Link} === '' ? false: true}"
+                                visible="{=${bookModel>/ui/download} === true}"
+                            />
+                            <Button
+                                text="{books>Name}"
+                                id="bookButton"
+                                enabled="{=${books>Link} === '' ? false: true}"
+                                visible="{=${bookModel>/ui/download} === false}"
                             />
                             <Text
-                                text="{books>Link}"
-                                id="text2">
-                            </Text>
+                                text="{=${books>Link} === '' ?'No Link': ${books>Link}}"
+                                id="urlText"
+                            />
                         </cells>
                     </ColumnListItem>
                 </items>
