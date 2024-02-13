@@ -20,13 +20,23 @@
                     <OverflowToolbar>
                         <content>
                             <ToolbarSpacer />
-                            <CheckBox id = "isDownloadId" text="Download link" selected="{bookModel>/ui/download}" 
-                             select=".checkDownload"/>
+                            <CheckBox
+                                id="isDownloadId"
+                                text="Download link"
+                                selected="{bookModel>/ui/download}"
+                                select=".checkDownload"
+                            />
                             <SearchField
                                 id="searchField"
                                 width="20%"
                                 search=".onSearch"
                             />
+                            <Button
+                                id="sortBooksButton"
+                                icon="sap-icon://sort"
+                                press=".onSort"
+                            />
+                            <Label text="{bookModel>/ui/order}"/>
                         </content>
                     </OverflowToolbar>
                 </headerToolbar>
@@ -58,7 +68,10 @@
                     </ColumnListItem>
                 </items>
                 <columns>
-                    <Column id="column0" visible="{=${bookModel>/ui/download} === true}">
+                    <Column
+                        id="column0"
+                        visible="{=${bookModel>/ui/download} === true}"
+                    >
                         <header>
                             <Label
                                 text="Name"
@@ -66,7 +79,10 @@
                             />
                         </header>
                     </Column>
-                    <Column id="column1" visible="{=${bookModel>/ui/download} === false}">
+                    <Column
+                        id="column1"
+                        visible="{=${bookModel>/ui/download} === false}"
+                    >
                         <header>
                             <Label
                                 text="Link"

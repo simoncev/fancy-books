@@ -1,12 +1,11 @@
 import SearchField from "sap/m/SearchField";
 import Table from "sap/m/Table";
-import TextField from "sap/ui/commons/TextField";
 import Controller from "sap/ui/core/mvc/Controller";
 import View from "sap/ui/core/mvc/View";
-import Binding from "sap/ui/model/Binding";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import FilterType from "sap/ui/model/FilterType";
+import Sorter from "sap/ui/model/Sorter";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
 
@@ -20,8 +19,8 @@ export default class Book extends Controller {
     /*eslint-disable @typescript-eslint/no-empty-function*/
     public onInit(): void {
         var oView: View  = this.getView() as View;
-        let data = {ui: {download:true}}
-        let guiModel = new JSONModel(data)
+        let data = {ui: {download:true, order:0}} //download link, order undefined
+        let guiModel = new JSONModel(data) 
         oView.setModel(guiModel,"bookModel")
 
 
@@ -37,10 +36,25 @@ export default class Book extends Controller {
 
 		bind.filter(oFilter, FilterType.Application);
     }
+    public onSort():void{
+        var oView: any  = this.getView() as View;
+        let aStates = [undefined, "asc", "desc"]
+        var iOrder = oView.getModel("bookModel")?.getProperty("/ui/order")
+        iOrder = (iOrder + 1) % aStates.length; // cycling order
+        var sOrder = aStates[iOrder];
+        oView.getModel("bookModel")?.setProperty("/ui/order",iOrder)
+
+        let sorter:Sorter = new Sorter("Name",sOrder === "desc")
+
+        let table: Table = oView?.byId("bookList") as Table
+        let bind = table.getBinding("items") as any 
+        bind?.sort(sOrder && sorter)
+
+    }
     public checkDownload(event: any):void {
         var bSelected = event.getParameter('selected');
-        var oView: View  = this.getView() as View;
+        var oView: any  = this.getView() as View;
        
-        oView.getModel()?.getProperty("ui/download").set(bSelected)
+        oView.getModel("bookModel")?.setProperty("/ui/download",bSelected)
     }
 }
