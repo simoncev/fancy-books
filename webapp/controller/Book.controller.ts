@@ -60,8 +60,8 @@ export default class Book extends Controller {
         var modelJSON:JSONModel = oView.getModel("bookModel");
         let newBook = {
             Mandt:"010",
-            Name: "DIVO_MESO",
-            Link: "link to book DIVO_MESO"
+            Name: "Приказни за обично лудило",
+            Link: "lhttps://onedrive.live.com/download?resid=18BE5E96C715F71C%2182924&authkey=!AB9xb7dlPg2eTo8ß"
         }
         modelOData.create('/ZBOOKS_DETAILSSet', newBook,  {
             success: function(){
@@ -70,7 +70,7 @@ export default class Book extends Controller {
                 MessageBox.alert("error")
             }
         });
-       
+       modelOData.refresh(true)
         
     }
     public checkDownload(event: any):void {

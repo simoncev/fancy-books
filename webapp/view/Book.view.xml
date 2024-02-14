@@ -53,7 +53,7 @@
                     >
                         <cells>
                             <Link
-                                text="DOWNLOAD: {books>Name}"
+                                text="DOWNLOAD: {books>Name} with link {books>Link}"
                                 target="_blank"
                                 href="{books>Link}"
                                 id="bookLink"
