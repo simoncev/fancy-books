@@ -73,6 +73,12 @@ export default class Book extends Controller {
        modelOData.refresh(true)
         
     }
+    public onEdit():void {
+
+    }
+    public onDelete():void {
+        
+    }
     public checkDownload(event: any):void {
         var bSelected = event.getParameter('selected');
         var oView: any  = this.getView() as View;

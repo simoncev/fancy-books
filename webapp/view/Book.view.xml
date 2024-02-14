@@ -22,7 +22,7 @@
                             <ToolbarSpacer />
                             <Button
                                 id="createBooksButton"
-                                text ="New Book"
+                                text="New Book"
                                 icon="sap-icon://create"
                                 press=".onCreate"
                             />
@@ -42,7 +42,7 @@
                                 icon="sap-icon://sort"
                                 press=".onSort"
                             />
-                            <Label text="{bookModel>/ui/order}"/>
+                            <Label text="{bookModel>/ui/order}" />
                         </content>
                     </OverflowToolbar>
                 </headerToolbar>
@@ -52,6 +52,20 @@
                         id="item0"
                     >
                         <cells>
+                         <Button
+                                xmlns="sap.m"
+                                text="Edit"
+                                id="bookEdit"
+                                icon="sap-icon://edit"
+                                press="onEdit"
+                            />
+                            <Button
+                                xmlns="sap.m"
+                                text="Delete"
+                                id="bookDelete"
+                                icon="sap-icon://delete"
+                                press="onDelete"
+                            />
                             <Link
                                 text="DOWNLOAD: {books>Name} with link {books>Link}"
                                 target="_blank"
@@ -70,13 +84,31 @@
                                 text="{=${books>Link} === '' ?'No Link': ${books>Link}}"
                                 id="urlText"
                             />
+                           
                         </cells>
                     </ColumnListItem>
                 </items>
                 <columns>
+                    <Column id="column2" width="5%">
+                        <header>
+                            <Label
+                                text="Edit"
+                                id="label2"
+                            />
+                        </header>
+                    </Column>
+                    <Column id="column3" width="5%">
+                        <header>
+                            <Label
+                                text="Delete"
+                                id="label3"
+                            />
+                        </header>
+                    </Column>
                     <Column
                         id="column0"
                         visible="{=${bookModel>/ui/download} === true}"
+                        width="40%"
                     >
                         <header>
                             <Label
@@ -88,6 +120,7 @@
                     <Column
                         id="column1"
                         visible="{=${bookModel>/ui/download} === false}"
+                        width="50%"
                     >
                         <header>
                             <Label
@@ -96,6 +129,7 @@
                             />
                         </header>
                     </Column>
+                    
                 </columns>
             </Table>
         </content>
