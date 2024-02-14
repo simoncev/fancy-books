@@ -51,6 +51,9 @@ export default class Book extends Controller {
         bind?.sort(sOrder && sorter)
 
     }
+    public onCreate():void {
+        alert ("create")
+    }
     public checkDownload(event: any):void {
         var bSelected = event.getParameter('selected');
         var oView: any  = this.getView() as View;

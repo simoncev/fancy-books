@@ -20,6 +20,12 @@
                     <OverflowToolbar>
                         <content>
                             <ToolbarSpacer />
+                            <Button
+                                id="createBooksButton"
+                                text ="New Book"
+                                icon="sap-icon://create"
+                                press=".onCreate"
+                            />
                             <CheckBox
                                 id="isDownloadId"
                                 text="Download link"
@@ -47,7 +53,7 @@
                     >
                         <cells>
                             <Link
-                                text="DOWNLOAD {books>Name}"
+                                text="DOWNLOAD: {books>Name}"
                                 target="_blank"
                                 href="{books>Link}"
                                 id="bookLink"
@@ -55,7 +61,7 @@
                                 visible="{=${bookModel>/ui/download} === true}"
                             />
                             <Button
-                                text="PLAY {books>Name}"
+                                text="PLAY: {books>Name}"
                                 id="bookButton"
                                 enabled="{=${books>Link} === '' ? false: true}"
                                 visible="{=${bookModel>/ui/download} === false}"
