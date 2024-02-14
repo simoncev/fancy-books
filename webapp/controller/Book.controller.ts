@@ -1,3 +1,4 @@
+import MessageBox from "sap/m/MessageBox";
 import SearchField from "sap/m/SearchField";
 import Table from "sap/m/Table";
 import Controller from "sap/ui/core/mvc/Controller";
@@ -5,8 +6,10 @@ import View from "sap/ui/core/mvc/View";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import FilterType from "sap/ui/model/FilterType";
+import Model from "sap/ui/model/Model";
 import Sorter from "sap/ui/model/Sorter";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 
 
 
@@ -52,7 +55,23 @@ export default class Book extends Controller {
 
     }
     public onCreate():void {
-        alert ("create")
+        var oView: any  = this.getView() as View;
+        var modelOData:ODataModel = oView.getModel("books");
+        var modelJSON:JSONModel = oView.getModel("bookModel");
+        let newBook = {
+            Mandt:"010",
+            Name: "DIVO_MESO",
+            Link: "link to book DIVO_MESO"
+        }
+        modelOData.create('/ZBOOKS_DETAILSSet', newBook,  {
+            success: function(){
+                MessageBox.alert("success")
+            }, error: function(){
+                MessageBox.alert("error")
+            }
+        });
+       
+        
     }
     public checkDownload(event: any):void {
         var bSelected = event.getParameter('selected');
