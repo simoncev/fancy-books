@@ -36,7 +36,7 @@ server:
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         backend:
-          - path: /sap
+          - path: /sap/opu/odata/sap/ZBOOKS_DETAILS_SRV
             url: http://sh0100:44300
             client: '010'
             destination: sh0_010

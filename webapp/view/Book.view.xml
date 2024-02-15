@@ -6,15 +6,21 @@
     displayBlock="true"
 >
     <Page
-        id="page"
-        title="{i18n>title}"
+        id="pageBookList"
+        title="{i18n>title}: {bookModel>/ui/currentBookName}"
     >
         <content>
             <Table
                 noDataText="No Data in table"
-                id="bookList"
+                id="idBooksTable"
                 headerText="Fancy Books"
                 items="{books>/ZBOOKS_DETAILSSet}"
+                growingThreshold="15"
+                growingScrollToLoad="false"
+                growing="true"
+                mode="SingleSelectMaster"
+                selectionChange=".onSelectionChange"
+                alternateRowColors="false"
             >
                 <headerToolbar>
                     <OverflowToolbar>

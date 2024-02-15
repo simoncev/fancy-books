@@ -1,0 +1,28 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    controllerName="com.spaiens.fancybook.controller.CreateBook"
+    displayBlock="true"
+>
+    <Page
+        id="pageCreateBook"
+        title="{i18n>createbooktitle} (SimpleForm tag) - two way binding with model"
+    >
+        <form:SimpleForm editable="true">
+            <form:content>
+                <Label text="Book Link" />
+                <Input id="idBookLink" value="{bookModel>/ui/link}" valueLiveUpdate="true" width="800px"/>
+                <Label text="Book Name" />
+                <Input id="idBookName" value="{bookModel>/ui/name}" valueLiveUpdate="true" width="200px"/>
+
+                <Button
+                    id="idCreateBook"
+                    press="onNewBook"
+                    text="Create Book"
+                />
+            </form:content>
+        </form:SimpleForm>
+    </Page>
+</mvc:View>

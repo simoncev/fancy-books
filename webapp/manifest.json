@@ -114,6 +114,13 @@
                     "target": [
                         "TargetBook"
                     ]
+                },
+                {
+                    "name": "RouteCreateBook",
+                    "pattern": "createbook",
+                    "target": [
+                        "TargetCreateBook"
+                    ]
                 }
             ],
             "targets": {
@@ -123,7 +130,15 @@
                     "clearControlAggregation": false,
                     "viewId": "Book",
                     "viewName": "Book"
+                },
+                "TargetCreateBook": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "CreateBook",
+                    "viewName": "CreateBook"
                 }
+
             }
         },
         "rootView": {

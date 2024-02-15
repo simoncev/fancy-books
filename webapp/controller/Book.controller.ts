@@ -1,6 +1,7 @@
 import MessageBox from "sap/m/MessageBox";
 import SearchField from "sap/m/SearchField";
 import Table from "sap/m/Table";
+import UIComponent from "sap/ui/core/UIComponent";
 import Controller from "sap/ui/core/mvc/Controller";
 import View from "sap/ui/core/mvc/View";
 import Filter from "sap/ui/model/Filter";
@@ -22,7 +23,7 @@ export default class Book extends Controller {
     /*eslint-disable @typescript-eslint/no-empty-function*/
     public onInit(): void {
         var oView: View  = this.getView() as View;
-        let data = {ui: {download:true, order:0}} //download link, order undefined
+        let data = {ui: {download:true, order:0, currentBookName:""}} //download link, order undefined
         let guiModel = new JSONModel(data) 
         oView.setModel(guiModel,"bookModel")
 
@@ -34,7 +35,7 @@ export default class Book extends Controller {
         let value:string = inpField?.getValue(); 
 				
 		let oFilter:Filter = new Filter("Name", FilterOperator.Contains, value);
-        let table: Table = oView?.byId("bookList") as Table
+        let table: Table = oView?.byId("idBooksTable") as Table
         let bind = table.getBinding("items") as any
 
 		bind.filter(oFilter, FilterType.Application);
@@ -49,21 +50,27 @@ export default class Book extends Controller {
 
         let sorter:Sorter = new Sorter("Name",sOrder === "desc")
 
-        let table: Table = oView?.byId("bookList") as Table
+        let table: Table = oView?.byId("idBooksTable") as Table
         let bind = table.getBinding("items") as any 
         bind?.sort(sOrder && sorter)
 
     }
     public onCreate():void {
+        var r = UIComponent.getRouterFor(this)
+		r.navTo('RouteCreateBook')
+        
+    }
+    public onEdit():void {
+
+    }
+    public onDelete():void {
         var oView: any  = this.getView() as View;
         var modelOData:ODataModel = oView.getModel("books");
-        var modelJSON:JSONModel = oView.getModel("bookModel");
-        let newBook = {
-            Mandt:"010",
-            Name: "Приказни за обично лудило",
-            Link: "lhttps://onedrive.live.com/download?resid=18BE5E96C715F71C%2182924&authkey=!AB9xb7dlPg2eTo8ß"
-        }
-        modelOData.create('/ZBOOKS_DETAILSSet', newBook,  {
+        var name = oView.getModel("bookModel")?.getProperty("/ui/currentBookName");
+        let oDataQuery = "/ZBOOKS_DETAILSSet(" +" Mandt=010, "+ "Name='"+name+"')";
+        //let oDataQuery = "/ZBOOKS_DETAILSSet("+ "Name='"+name+"')";
+        alert (oDataQuery)
+        modelOData.remove(oDataQuery, {
             success: function(){
                 MessageBox.alert("success")
             }, error: function(){
@@ -73,16 +80,17 @@ export default class Book extends Controller {
        modelOData.refresh(true)
         
     }
-    public onEdit():void {
-
-    }
-    public onDelete():void {
-        
-    }
     public checkDownload(event: any):void {
         var bSelected = event.getParameter('selected');
         var oView: any  = this.getView() as View;
        
         oView.getModel("bookModel")?.setProperty("/ui/download",bSelected)
+    }
+    public onSelectionChange(event:any) {
+        var oView: any  = this.getView() as View;
+        var oSelectedItem = event.getParameter("listItem");
+        var oModel = oSelectedItem.getBindingContext("books").getObject();
+        let title = oModel.Name;
+        oView.getModel("bookModel")?.setProperty("/ui/currentBookName",title)
     }
 }

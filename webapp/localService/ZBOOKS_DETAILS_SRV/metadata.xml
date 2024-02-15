@@ -5,6 +5,7 @@
             <EntityType Name="ZBOOKS_DETAILS" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="Mandt"/>
+                    <PropertyRef Name="Name"/>
                 </Key>
                 <Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Client"/>
                 <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Book"/>
