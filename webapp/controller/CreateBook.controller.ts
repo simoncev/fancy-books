@@ -26,9 +26,10 @@ export default class CreateBook extends Controller{
         var link = oView.getModel("bookModel")?.getProperty("/ui/link")
         let newBook = {
             Name: name,
-            Link: link
+            Link: link,
+            Edition: 1
         }
-        modelOData.create('/ZBOOKS_DETAILSSet', newBook,  {
+        modelOData.create('/ZBOOKS1Set', newBook,  {
             success: function(){
                 MessageBox.alert("success")
             }, error: function(){

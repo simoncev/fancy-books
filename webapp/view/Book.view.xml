@@ -14,7 +14,7 @@
                 noDataText="No Data in table"
                 id="idBooksTable"
                 headerText="Fancy Books"
-                items="{books>/ZBOOKS_DETAILSSet}"
+                items="{books>/ZBOOKS1Set}"
                 growingThreshold="15"
                 growingScrollToLoad="false"
                 growing="true"
@@ -58,7 +58,11 @@
                         id="item0"
                     >
                         <cells>
-                         <Button
+                            <Text
+                                text="{=${books>Edition}}"
+                                id="idEdition"
+                            />
+                            <Button
                                 xmlns="sap.m"
                                 text="Edit"
                                 id="bookEdit"
@@ -90,12 +94,25 @@
                                 text="{=${books>Link} === '' ?'No Link': ${books>Link}}"
                                 id="urlText"
                             />
-                           
                         </cells>
                     </ColumnListItem>
                 </items>
                 <columns>
-                    <Column id="column2" width="5%">
+                    <Column
+                        id="column0"
+                        width="3%"
+                    >
+                        <header>
+                            <Label
+                                text="Edition"
+                                id="label0"
+                            />
+                        </header>
+                    </Column>
+                    <Column
+                        id="column2"
+                        width="5%"
+                    >
                         <header>
                             <Label
                                 text="Edit"
@@ -103,7 +120,10 @@
                             />
                         </header>
                     </Column>
-                    <Column id="column3" width="5%">
+                    <Column
+                        id="column3"
+                        width="5%"
+                    >
                         <header>
                             <Label
                                 text="Delete"
@@ -112,30 +132,29 @@
                         </header>
                     </Column>
                     <Column
-                        id="column0"
+                        id="column4"
                         visible="{=${bookModel>/ui/download} === true}"
                         width="40%"
                     >
                         <header>
                             <Label
                                 text="Name"
-                                id="label0"
+                                id="label4"
                             />
                         </header>
                     </Column>
                     <Column
-                        id="column1"
+                        id="column5"
                         visible="{=${bookModel>/ui/download} === false}"
                         width="50%"
                     >
                         <header>
                             <Label
                                 text="Link"
-                                id="label1"
+                                id="label5"
                             />
                         </header>
                     </Column>
-                    
                 </columns>
             </Table>
         </content>
