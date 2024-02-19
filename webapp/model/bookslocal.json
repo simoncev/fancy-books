@@ -1,0 +1,441 @@
+{"books": [
+    {
+      "year": 1894,
+      "tag": "novel",
+      "title": "ПАН", "author": "Кнут Хамсун",
+      "page": "pan",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182975&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Hamsun_bldsa_HA0341.jpg/1280px-Hamsun_bldsa_HA0341.jpg"
+    },
+    {
+      "year": 1943,
+      "tag": "novel",
+      "title": "Малиот Принц", "author": "Сент Егзипери",
+      "page": "maliot-princ",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182862&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/11exupery-inline1-500.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Знаци покрај патот", "author": "Иво Андриќ",
+      "page": "znaci-pokraj-patot",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182863&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://www.nobelprize.org/images/andric-13146-portrait-mini-2x.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Чиста Анархија", "author": "Вуди Ален",
+      "page": "chista-anarhija",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182927&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Woody_Allen_-_Kup.JPG"
+    },
+    {
+      "tag": "novel",
+      "title": "Дервишот и смртта", "author": "Меша Селимовиќ",
+      "page": "dervishot-i-smrtta",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182834&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/sr/8/86/Mselimovic.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Приказни за обично лудило", "author": "Чарлс Буковски",
+      "page": "prikazni-za-obichno-ludilo",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182924&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Charles_Bukowski_smoking.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Ишчекивање и друге приче", "author": "Хорхе Луис Борхес",
+      "page": "ishchekivanje-i-druge-priche",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182856&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Jorge_Luis_Borges_1951%2C_by_Grete_Stern.jpg/1280px-Jorge_Luis_Borges_1951%2C_by_Grete_Stern.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Призрак (Раскази)", "author": "Исак Башевис Сингер",
+      "page": "prizrak",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182812&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Isaac_Bashevis_Singer_%28Gotfryd%29.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Девојка-Ѕвер", "author": "Едуард Лимонов",
+      "page": "devojka-zsver",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182893&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Eduard_Limonov_-_2018.jpg/1920px-Eduard_Limonov_-_2018.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Фукоово клатно", "author": "Умберто Еко",
+      "page": "fukoovo-klatno",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182840&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Italiaanse_schrijver_Umberto_Eco%2C_portret.jpg/440px-Italiaanse_schrijver_Umberto_Eco%2C_portret.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Мудрост", "author": "Халил Џибран",
+      "page": "mudrost",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182836&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Kahlil_Gibran_1913.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Се што сакав да знам научив во градинка", "author": "Роберт Фулгам",
+      "page": "se-shto-sakav-da-znam-nauchiv-vo-gradinka",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182817&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Robert_Fulghum.jpg/1280px-Robert_Fulghum.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Сидарта", "author": "Херман Хесе",
+      "page": "sidarta",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182842&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hermann_Hesse_2.jpg/1920px-Hermann_Hesse_2.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Лек против меланхолија", "author": "Реј Бредбери",
+      "page": "lek-protiv-melanholija",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182858&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Ray_Bradbury_1959.JPG"
+    },
+    {
+      "tag": "story",
+      "title": "Светогорските отци", "author": "Отец Пасиј",
+      "page": "svetogorskite-otci",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182860&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%9F%D0%B0%D0%B8%D1%81%D0%B8%D0%B9_%D0%A5%D0%B8%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%B8.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Бавност", "author": "Милан Кундера",
+      "page": "bavnost",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182895&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Milan_Kundera_redux.jpg"
+    },
+    {
+      "tag": "essay",
+      "title": "Завеса", "author": "Милан Кундера",
+      "page": "zavesa",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182912&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Milan_Kundera_redux.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Ние", "author": "Евгениј Замјатин",
+      "page": "nie",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182902&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/en/b/be/Yevgeny-zamyatin.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Соњечка", "author": "Људмила Улицка",
+      "page": "sonjechka",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182898&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Lyudmila_Ulitskaya_2.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Страдањата на младиот Вертер", "author": "Гете",
+      "page": "stradanjata-na-mladiot-verter",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182933&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/1920px-Goethe_%28Stieler_1828%29.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Клавирска придружба", "author": "Нина Берберова",
+      "page": "klavirska-pridruzhba",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182950&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Nina_Berberova_1920s.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Сјајот на жената", "author": "Ромен Гари",
+      "page": "sjajot-na-zhenata",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182947&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/en/a/a2/Romain_Gary.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Адолф", "author": "Бенжамин Констан",
+      "page": "adolf",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182945&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Roche_-_Portrait_de_Benjamin_Constant_%281767-1830%29%2C_%C3%A9crivain_et_homme_politique_-_P1679_-_Mus%C3%A9e_Carnavalet.jpg/1920px-Roche_-_Portrait_de_Benjamin_Constant_%281767-1830%29%2C_%C3%A9crivain_et_homme_politique_-_P1679_-_Mus%C3%A9e_Carnavalet.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Бебиситерка", "author": "Роберт Кувер",
+      "page": "bebisiterkata",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182948&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Robert_Coover_CaveWriting_1_%28cropped%29.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Едноминутни новели", "author": "Иштван Еркељ",
+      "page": "ednominutni-noveli",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182959&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/%C3%96rk%C3%A9ny_Istv%C3%A1n_1974.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Во земјата на магијата", "author": "Арни Мишо",
+      "page": "vo-zemjata-na-magijata",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182962&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/en/e/e7/Henri_Michaux.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Плескање на слугинката", "author": "Роберт Кувер",
+      "page": "pleskanje-na-sluginkata",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182976&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Robert_Coover_CaveWriting_1_%28cropped%29.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Галебот", "author": "Ричард Бах",
+      "page": "galebot",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182920&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://richardbach.com/wp-content/uploads/2023/02/6A7AD92D-E3AB-4E1D-AE51-C2911D7CC64A.jpeg"
+    },
+    {
+      "tag": "novel",
+      "title": "Папагајева Теорема", "author": "Денис Геџ",
+      "page": "papagajeva-teorema",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182915&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Denis_Guedj-FIG_2000.jpg/1024px-Denis_Guedj-FIG_2000.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Новела за Сонот", "author": "Артур Шницлер",
+      "page": "novela-za-sonot",
+      "embed": "//onedrive.live.com/embed?resid=18BE5E96C715F71C%2182275&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Arthur_Schnitzler_1912_%28cropped%29.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Стравот на голманот од пенал", "author": "Петер Хандке",
+      "page": "stravot-na-golmanot-od-penal",
+      "embed": "onedrive.live.com/embed?resid=18BE5E96C715F71C%2182277&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Peter-handke.jpg/1280px-Peter-handke.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Хроника на една најавена смрт", "author": "Габриел Гарсија Маркес",
+      "page": "hronika-na-edna-najavena-smrt",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182977&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Gabriel_Garcia_Marquez.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Ајнштајновите сништа", "author": "Алан Лајтман",
+      "page": "ajnshtajnovite-snishta",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182980&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Alan_by_Michael_Lionstar.jpg/2560px-Alan_by_Michael_Lionstar.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Големата црвена книга на Руми", "author": "Руми",
+      "page": "golemata-crvena-kniga-na-rumi",
+      "embed": "onedrive.live.com/embed?resid=18BE5E96C715F71C%2182692&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg"
+    },
+    {
+      "tag": "essay",
+      "title": "Богомислие", "author": "Стефан Санџакоски",
+      "page": "bogomislie",
+      "embed": "https://onedrive.live.com/embed?resid=18BE5E96C715F71C%2182308&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/%D0%A1%D1%82%D0%B5%D1%84%D0%B0%D0%BD_%D0%A1%D0%B0%D0%BD%D1%9F%D0%B0%D0%BA%D0%BE%D1%81%D0%BA%D0%B8.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Белиот фустан", "author": "Разни автори",
+      "page": "beliot-fustan",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182979&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Marilyn_Monroe_at_Ciro%27s.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Сонуваат ли андроидите дигитални овци?", "author": "Филип Дик",
+      "page": "sonuvaat-li-androidite-digitalni-ovci",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183002&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Philip_K_Dick_in_early_1960s_%28photo_by_Arthur_Knight%29_02_%28cropped%29.jpg"
+    },
+    {
+      "tag": "essay",
+      "title": "Американски Предавања", "author": "Итало Калвино",
+      "page": "amerikanski-predavanja",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2182983&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Italo-Calvino.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Необични приказни", "author": "Давид Албахари",
+      "page": "neobichni-prikazni",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183006&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/David_Albahari_auf_dem_Blauen_Sofa_2.jpg/1280px-David_Albahari_auf_dem_Blauen_Sofa_2.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Ѓаволовиот речник", "author": "Емброуc Бирс",
+      "page": "gjavoloviot-rechnik",
+      "link": "https://onedrive.live.com/downoad?resid=18BE5E96C715F71C%2183008&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Abierce.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Пробај со девојката", "author": "Рејмонд Чендлер",
+      "page": "probaj-so-devojkata",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183010&authkey=!AB9xb7dlPg2eTo8",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Raymond_Chandler_%28Lady_in_the_Lake_portrait%2C_1943%29.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Мистерии", "author": "Кнут Хамсун",
+      "page": "misterii",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183020&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Hamsun_bldsa_HA0341.jpg/1280px-Hamsun_bldsa_HA0341.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Навистина нежно", "author": "Вуди Ален",
+      "page": "navistina-nezhno",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183017&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Woody_Allen_-_Kup.JPG"
+    },
+    {
+      "tag": "play",
+      "title": "Трагично и патетично", "author": "Вуди Ален",
+      "page": "tragichno-i-patetichno",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183018&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Woody_Allen_-_Kup.JPG"
+    },
+    {
+      "tag": "story",
+      "title": "Имитатор на гласови", "author": "Томас Бернхард",
+      "page": "imitator-na-glasovi",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183022&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Thomas_Bernhard_%281987%29.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Природен роман", "author": "Георги Господинов",
+      "page": "priroden-roman",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183024&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/GeorgiGospodinov_%28cropped%29.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Гласовите на времето", "author": "Џејмс Балард",
+      "page": "glasovite-na-vremeto",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183028&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/en/a/ad/JGBallard.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Набљудувач", "author": "Владимир Набоков",
+      "page": "nabljuduvach",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183030&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Vladimir_Nabokov_1973.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Ресторантьт на края на вселената", "author": "Даглас Адамс",
+      "page": "restoranot-na-krajot-na-vselenata",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183026&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Douglas_adams_portrait_cropped.jpg"
+    },
+    {
+      "tag": "story",
+      "title": "Конзервирани импресии", "author": "Горан Стефановски",
+      "page": "konzervirani-impresii",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183041&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%D0%93%D0%BE%D1%80%D0%B0%D0%BD_%D0%A1%D1%82%D0%B5%D1%84%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Један дан Ивана Денисовича", "author": "Александар Сољжењицин",
+      "page": "jedan-dan-ivana-denisovicha",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183036&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Aleksandr_Solzhenitsyn_1974crop.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Црнци во Фиренца", "author": "Ведрана Рудан",
+      "page": "crnci-vo-firenca",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183069&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/VedranaRudan.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Кира Киралина", "author": "Панаит Истрати",
+      "page": "kira-kiralina",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183071&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Panait_Istrati_2.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Ишмаил", "author": "Владимир Арсениевиќ",
+      "page": "ishmail",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183073&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Vladimir_Arsenijevi%C4%87_at_Krokodil_04_-_cropped.jpg/1024px-Vladimir_Arsenijevi%C4%87_at_Krokodil_04_-_cropped.jpg"
+    },
+    {
+      "tag": "play",
+      "title": "Диво месо", "author": "Горан Стефановски",
+      "page": "divo-meso",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183074&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%D0%93%D0%BE%D1%80%D0%B0%D0%BD_%D0%A1%D1%82%D0%B5%D1%84%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8.jpg"
+    },
+    {
+      "tag": "novel",
+      "title": "Богородична црква у Паризу", "author": "Виктор Иго",
+      "page": "bogorodichna-crkva-u-parizu",
+      "link": "https://onedrive.live.com/download?resid=18BE5E96C715F71C%2183081&authkey=!AB9xb7dlPg2eTo8",
+      "filetype": "video/mp4",
+      "poster_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg/1920px-Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg"
+    }
+  ]
+}

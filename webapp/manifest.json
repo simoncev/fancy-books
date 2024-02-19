@@ -25,6 +25,10 @@
                     "odataVersion": "2.0"
                 }
             },
+            "booklocal": {
+				"type": "JSON",
+				"uri": "model/bookslocal.json"
+			},
             "annotation": {
                 "type": "ODataAnnotation",
                 "uri": "annotations/annotation.xml",
