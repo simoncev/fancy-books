@@ -12,7 +12,7 @@ import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 export default class CreateBook extends Controller{
     onInit(): void {
         var oView: View  = this.getView() as View;
-        let formData = {ui: {name:"", link:""}} //book name, link to book
+        let formData = {ui: {name:"", link:"", edition:1, author:""}} //book name, link to book, edition and author
         let guiModel = new JSONModel(formData) 
         oView.setModel(guiModel,"bookModel")
     }
@@ -24,10 +24,13 @@ export default class CreateBook extends Controller{
         var modelOData:ODataModel = oView.getModel("books");
         var name = oView.getModel("bookModel")?.getProperty("/ui/name");
         var link = oView.getModel("bookModel")?.getProperty("/ui/link")
+        var edition = oView.getModel("bookModel")?.getProperty("/ui/edition")
+        var author = oView.getModel("bookModel")?.getProperty("/ui/author")
         let newBook = {
             Name: name,
             Link: link,
-            Edition: 1
+            Edition: edition,
+            Author: author
         }
         modelOData.create('/ZBOOKS1Set', newBook,  {
             success: function(){

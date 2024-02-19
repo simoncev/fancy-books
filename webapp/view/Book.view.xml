@@ -62,6 +62,10 @@
                                 text="{=${books>Edition}}"
                                 id="idEdition"
                             />
+                            <Text
+                                text="{=${books>Author}}"
+                                id="idAuthor"
+                            />
                             <Button
                                 xmlns="sap.m"
                                 text="Edit"
@@ -100,7 +104,7 @@
                 <columns>
                     <Column
                         id="column0"
-                        width="3%"
+                        width="5%"
                     >
                         <header>
                             <Label
@@ -109,9 +113,20 @@
                             />
                         </header>
                     </Column>
+                     <Column
+                        id="column1"
+                        width="17%"
+                    >
+                        <header>
+                            <Label
+                                text="Author"
+                                id="label1"
+                            />
+                        </header>
+                    </Column>
                     <Column
                         id="column2"
-                        width="5%"
+                        width="10%"
                     >
                         <header>
                             <Label
@@ -122,7 +137,7 @@
                     </Column>
                     <Column
                         id="column3"
-                        width="5%"
+                        width="10%"
                     >
                         <header>
                             <Label
@@ -134,7 +149,7 @@
                     <Column
                         id="column4"
                         visible="{=${bookModel>/ui/download} === true}"
-                        width="40%"
+                        width="60%"
                     >
                         <header>
                             <Label
@@ -146,7 +161,7 @@
                     <Column
                         id="column5"
                         visible="{=${bookModel>/ui/download} === false}"
-                        width="50%"
+                        width="60%"
                     >
                         <header>
                             <Label

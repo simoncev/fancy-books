@@ -16,7 +16,10 @@
                 <Input id="idBookLink" value="{bookModel>/ui/link}" valueLiveUpdate="true" width="800px"/>
                 <Label text="Book Name" />
                 <Input id="idBookName" value="{bookModel>/ui/name}" valueLiveUpdate="true" width="200px"/>
-
+                <Label text="Author" />
+                <Input id="idBooAuthor" value="{bookModel>/ui/author}" valueLiveUpdate="true" width="300px"/>
+                <Label text="Edition" />
+                <Input id="idEdition" value="{bookModel>/ui/edition}" valueLiveUpdate="true" width="50px"/>
                 <Button
                     id="idCreateBook"
                     press="onNewBook"
