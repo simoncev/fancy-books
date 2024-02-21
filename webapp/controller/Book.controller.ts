@@ -29,6 +29,8 @@ import ODataModel from "sap/ui/model/odata/v2/ODataModel";
  * @namespace com.spaiens.fancybook.controller
  */
 export default class Book extends Controller {
+      
+    updateDialog: Dialog | undefined
 
     /*eslint-disable @typescript-eslint/no-empty-function*/
     public onInit(): void {
@@ -36,24 +38,25 @@ export default class Book extends Controller {
         let data = {
             ui: {
                 download: true, order: 0,
-                currentBookName: "", currentEdition: 1, currentAuthor: "", currentLink: ""
+                currentBookName: "", currentEdition: 1, currentAuthor: "", currentLink: "", bookCount: 0
             }
         } //download link, order undefined
         let guiModel = new JSONModel(data)
         oView.setModel(guiModel, "bookModel")
 
 
+
     }
     public onSearch(): void {
-        var oView: View = this.getView() as View;
+        var oView: any = this.getView() as View;
         let inpField: SearchField = oView.byId("searchField") as SearchField;
         let value: string = inpField?.getValue();
 
         let oFilter: Filter = new Filter("Name", FilterOperator.Contains, value);
         let table: Table = oView?.byId("idBooksTable") as Table
-        let bind = table.getBinding("items") as any
+        let _items = table.getBinding("items") as any
 
-        bind.filter(oFilter, FilterType.Application);
+        _items.filter(oFilter, FilterType.Application);
     }
     public onSort(): void {
         var oView: any = this.getView() as View;
@@ -66,8 +69,9 @@ export default class Book extends Controller {
         let sorter: Sorter = new Sorter("Name", sOrder === "desc")
 
         let table: Table = oView?.byId("idBooksTable") as Table
-        let bind = table.getBinding("items") as any
-        bind?.sort(sOrder && sorter)
+        let _items = table.getBinding("items") as any
+        _items?.sort(sOrder && sorter)
+
 
     }
     public onCreate(): void {
@@ -76,24 +80,32 @@ export default class Book extends Controller {
 
     }
     public onEdit(): void {
+        if (this.updateDialog !== undefined ) {
+            MessageBox.show("Dialog is already created ");
+            return;
+        }
         // get value for model
-        var oView: any = this.getView() as View;
+        var oView: View = this.getView() as View;
         var name = oView.getModel("bookModel")?.getProperty("/ui/currentBookName");
         var link = oView.getModel("bookModel")?.getProperty("/ui/currentLink");
         var author = oView.getModel("bookModel")?.getProperty("/ui/currentAuthor");
         var edition = oView.getModel("bookModel")?.getProperty("/ui/currentEdition");
+        let idLink = oView.createId("idBookLinkInput") ;
 
         // button-like structure
         let buttonSettings: $ButtonSettings = {
             text: "OK",
             press: function (event: any) {
-                var modelOData: ODataModel = oView.getModel("books");
-
+                var modelOData: ODataModel = oView.getModel("books") as ODataModel;
+                var _textControlAuthor: any = oView.byId("idAuthorInput");
+                let _author = _textControlAuthor?.getValue()
                 let updateBook = {
                     Link: link,
-                    Author: author
+                    Author: _author
                 }
-                modelOData.update("/ZBOOKS1Set(Name='" + name + "',Edition=" + edition + ")", updateBook, {
+                let oDataQuery = encodeURI("/ZBOOKS1Set(Name='" + name + "',Edition=" + edition + ")")
+
+                modelOData.update(oDataQuery, updateBook, {
                     success: function () {
                         MessageToast.show("success");
                     }, error: function () {
@@ -109,26 +121,31 @@ export default class Book extends Controller {
         let dialogSettings: $DialogSettings = {
             title: `Update Dialog for : ${name}`,
             draggable: true,
-            buttons: [buttonOK]
+            buttons: [buttonOK],
+            afterClose:()=>{
+                this.updateDialog?.destroy()
+                this.updateDialog = undefined
+            }
         }
-        let updateDialog = new Dialog(dialogSettings);
+        this.updateDialog = new Dialog(dialogSettings);
         let panel = new Panel();
 
-        let comboSetting: $ComboBoxSettings = this.createComboSettings(author)
+        let comboSetting: $ComboBoxSettings = this.createComboSettings(author, oView)
 
         panel.addContent(new Label({ text: "Link" }))
-        panel.addContent(new Input({ value: link }))
+        panel.addContent(new Input({ id: idLink, value: link }))
         panel.addContent(new Label({ text: "Author" }))
         panel.addContent(new ComboBox(comboSetting))
         panel.addContent(new Label({ text: "Edition" }))
-        panel.addContent(new Input({ value: edition }))
+        panel.addContent(new Input({ value: edition, editable: false }))
 
-        updateDialog.addContent(panel);
-        updateDialog.open();
+        this.updateDialog.addContent(panel);
+        this.updateDialog.open();
 
     }
-    private createComboSettings(author: any): $ComboBoxSettings {
-        let _items:Item[] = [
+    private createComboSettings(author: any, oView: View): $ComboBoxSettings {
+        let idAutor = oView.createId("idAuthorInput");
+        let _items: Item[] = [
             new Item({ text: "Кнут Хамсун" }),
             new Item({ text: "Сент Егзипери" }),
             new Item({ text: "Иво Андриќ" }),
@@ -175,7 +192,7 @@ export default class Book extends Controller {
             new Item({ text: "Панаит Истрати" }),
             new Item({ text: "Владимир Арсениевиќ" }),
             new Item({ text: "Виктор Иго" }),
-        ].sort((obj1:Item, obj2:Item) => {
+        ].sort((obj1: Item, obj2: Item) => {
             if (obj1.getText() > obj2.getText()) {
                 return 1;
             }
@@ -186,9 +203,10 @@ export default class Book extends Controller {
         });
 
         return {
+            id: idAutor,
             value: author,
             width: "100%",
-            items: _items 
+            items: _items
         };
     }
 
@@ -199,11 +217,16 @@ export default class Book extends Controller {
         var currentEdition = oView.getModel("bookModel")?.getProperty("/ui/currentEdition");
 
         let oDataQuery = "/ZBOOKS1Set(Name='" + name + "',Edition=" + currentEdition + ")"
-        modelOData.remove(oDataQuery, {
+
+        let oDataQueryEncoded = encodeURI(oDataQuery);
+
+        modelOData.remove(oDataQueryEncoded, {
             success: function () {
                 MessageToast.show("success");
             }, error: function () {
-                MessageToast.show("error");
+                MessageBox.show(
+                    "error"
+                );
             }
         });
         modelOData.refresh(true)
@@ -227,5 +250,73 @@ export default class Book extends Controller {
         oView.getModel("bookModel")?.setProperty("/ui/currentAuthor", author)
         oView.getModel("bookModel")?.setProperty("/ui/currentLink", link)
         oView.getModel("bookModel")?.setProperty("/ui/currentEdition", edition)
+    }
+    public onImportBooks() {
+
+
+        var oView: any = this.getView() as View;
+        var modelOData: ODataModel = oView.getModel("books");
+        //modelOData.setUseBatch(true);
+        var localData: ODataModel = oView.getModel("bookslocal");
+        let booksToImport = localData.getProperty('/books');
+
+        if (booksToImport instanceof Array) {
+            booksToImport.forEach(function (book: any, index: int) {
+                console.log("Book", book)
+                let newBook = {
+                    Name: book.title,
+                    Link: book.link,
+                    Edition: 1,
+                    Author: book.author
+                }
+                modelOData.create('/ZBOOKS1Set', newBook, {
+                    success: function () {
+                        MessageToast.show("success")
+                    }, error: function () {
+                        MessageToast.show("error")
+                    }
+                });
+
+            });
+
+
+        }
+
+        //modelOData.submitChanges(); 
+        modelOData.refresh(true)
+    }
+    public async onImportBooksSync() {
+
+
+        var oView: any = this.getView() as View;
+        var modelOData: ODataModel = oView.getModel("books");
+        var localData: ODataModel = oView.getModel("bookslocal");
+        let booksToImport = localData.getProperty('/books');
+
+        if (booksToImport instanceof Array) {
+            for (let book of booksToImport) {
+                await this.saveBook(book, modelOData);
+            }
+        }
+
+        modelOData.refresh(true)
+    }
+
+    private async saveBook(book: any, modelOData: ODataModel) {
+        let newBook = {
+            Name: book.title,
+            Link: book.link,
+            Edition: 2,
+            Author: book.author
+        };
+        modelOData.create('/ZBOOKS1Set', newBook, {
+            success: function () {
+                MessageToast.show("success");
+                return true;
+            }, error: function () {
+                MessageToast.show("error");
+                return false;
+            }
+        });
     }
 }

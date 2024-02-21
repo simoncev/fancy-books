@@ -25,10 +25,7 @@
                     "odataVersion": "2.0"
                 }
             },
-            "booklocal": {
-				"type": "JSON",
-				"uri": "model/bookslocal.json"
-			},
+            
             "annotation": {
                 "type": "ODataAnnotation",
                 "uri": "annotations/annotation.xml",
@@ -87,12 +84,16 @@
                 "settings": {
                     "defaultBindingMode": "TwoWay",
                     "defaultCountMode": "Inline",
-                    "refreshAfterChange": false,
+                    "refreshAfterChange": true,
                     "metadataUrlParams": {
                         "sap-value-list": "none"
                     }
                 }
-            }
+            },
+            "bookslocal": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/bookslocal.json"
+			}
         },
         "resources": {
             "css": [

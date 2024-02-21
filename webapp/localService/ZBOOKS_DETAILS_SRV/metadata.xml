@@ -7,9 +7,9 @@
                     <PropertyRef Name="Name"/>
                     <PropertyRef Name="Edition"/>
                 </Key>
-                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100"/>
                 <Property Name="Edition" Type="Edm.Byte" Nullable="false"/>
-                <Property Name="Author" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="Author" Type="Edm.String" Nullable="false" MaxLength="100"/>
                 <Property Name="Link" Type="Edm.String" Nullable="false" MaxLength="255"/>
             </EntityType>
             <EntityContainer Name="ZBOOKS_DETAILS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">

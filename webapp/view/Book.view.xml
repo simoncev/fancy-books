@@ -4,10 +4,11 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     controllerName="com.spaiens.fancybook.controller.Book"
     displayBlock="true"
+    id="viewBook"
 >
     <Page
         id="pageBookList"
-        title="{i18n>title}: {bookModel>/ui/currentBookName}"
+        title="{i18n>title}: {bookModel>/ui/currentBookName} ({bookModel>/ui/bookCount})"
     >
         <content>
             <Table
@@ -15,7 +16,7 @@
                 id="idBooksTable"
                 headerText="Fancy Books"
                 items="{books>/ZBOOKS1Set}"
-                growingThreshold="15"
+                growingThreshold="100"
                 growingScrollToLoad="false"
                 growing="true"
                 mode="SingleSelectMaster"
@@ -26,11 +27,24 @@
                     <OverflowToolbar>
                         <content>
                             <ToolbarSpacer />
+                          
                             <Button
                                 id="createBooksButton"
                                 text="New Book"
                                 icon="sap-icon://create"
                                 press=".onCreate"
+                            />
+                            <Button
+                                id="importBooksButton"
+                                text="Import Book"
+                                icon="sap-icon://database"
+                                press=".onImportBooks"
+                            />
+                            <Button
+                                id="importBooksButtonSync"
+                                text="Import Book (Sync)"
+                                icon="sap-icon://synchronize"
+                                press=".onImportBooksSync"
                             />
                             <CheckBox
                                 id="isDownloadId"
