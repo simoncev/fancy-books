@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View 
     xmlns:form="sap.ui.layout.form"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
@@ -17,9 +17,14 @@
                 <Label text="Book Name" />
                 <Input id="idBookName" value="{bookModel>/ui/name}" valueLiveUpdate="true" width="200px"/>
                 <Label text="Author" />
-                <Input id="idBooAuthor" value="{bookModel>/ui/author}" valueLiveUpdate="true" width="300px"/>
+                <Input id="idBookAuthor" value="{bookModel>/ui/author}" valueLiveUpdate="true" width="300px"/>
                 <Label text="Edition" />
                 <Input id="idEdition" value="{bookModel>/ui/edition}" valueLiveUpdate="true" width="50px"/>
+                <Label text="Price" />
+                <Input id="idPrice" value="{bookModel>/ui/price}" valueLiveUpdate="true" width="50px"/>
+                <Label text="Currency" />
+                <Input id="idCurrency" value="{bookModel>/ui/currency}" valueLiveUpdate="true" width="50px"/>
+                
                 <Button
                     id="idCreateBook"
                     press="onNewBook"

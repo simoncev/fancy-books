@@ -40,7 +40,7 @@ server:
             url: http://sh0100:44300
             client: '010'
             destination: sh0_010
-          - path: /sap
+          - path: /sap/opu/odata/sap/ZBOOKS_DETAILS2_SRV
             url: http://sh0100:44300
             client: '010'
             destination: sh0_010

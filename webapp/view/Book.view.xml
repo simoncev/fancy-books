@@ -27,12 +27,22 @@
                     <OverflowToolbar>
                         <content>
                             <ToolbarSpacer />
-                          
+                            <Button
+                                id="idSmartTable"
+                                text="Smart Book Table"
+                                press=".onSmartBooksTable"
+                            />
                             <Button
                                 id="createBooksButton"
                                 text="New Book"
                                 icon="sap-icon://create"
                                 press=".onCreate"
+                            />
+                            <Button
+                                id="createSmartBooksButton"
+                                text="New Smart Book"
+                                icon="sap-icon://create"
+                                press=".onCreateSmart"
                             />
                             <Button
                                 id="importBooksButton"
@@ -102,15 +112,15 @@
                                 enabled="{=${books>Link} === '' ? false: true}"
                                 visible="{=${bookModel>/ui/download} === true}"
                             />
-                            <Button
-                                text="PLAY: {books>Name}"
-                                id="bookButton"
-                                enabled="{=${books>Link} === '' ? false: true}"
-                                visible="{=${bookModel>/ui/download} === false}"
+                            
+                           
+                            <Text
+                                text="{books>Book_price}"
+                                id="idPrice"
                             />
                             <Text
-                                text="{=${books>Link} === '' ?'No Link': ${books>Link}}"
-                                id="urlText"
+                                text="{books>Book_currency}"
+                                id="idCurrency"
                             />
                         </cells>
                     </ColumnListItem>
@@ -140,7 +150,7 @@
                     </Column>
                     <Column
                         id="column2"
-                        width="10%"
+                        width="20%"
                     >
                         <header>
                             <Label
@@ -151,7 +161,7 @@
                     </Column>
                     <Column
                         id="column3"
-                        width="10%"
+                        width="20%"
                     >
                         <header>
                             <Label
@@ -163,7 +173,7 @@
                     <Column
                         id="column4"
                         visible="{=${bookModel>/ui/download} === true}"
-                        width="60%"
+                        width="40%"
                     >
                         <header>
                             <Label
@@ -172,15 +182,26 @@
                             />
                         </header>
                     </Column>
+                    
                     <Column
                         id="column5"
-                        visible="{=${bookModel>/ui/download} === false}"
-                        width="60%"
+                        width="10%"
                     >
                         <header>
                             <Label
-                                text="Link"
+                                text="Price"
                                 id="label5"
+                            />
+                        </header>
+                    </Column>
+                    <Column
+                        id="column6"
+                        width="10%"
+                    >
+                        <header>
+                            <Label
+                                text="Currency"
+                                id="label6"
                             />
                         </header>
                     </Column>

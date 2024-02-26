@@ -79,6 +79,11 @@ export default class Book extends Controller {
         r.navTo('RouteCreateBook')
 
     }
+    public onCreateSmart(): void {
+        var r = UIComponent.getRouterFor(this)
+        r.navTo('RouteCreateBookSmart')
+
+    }
     public onEdit(): void {
         if (this.updateDialog !== undefined ) {
             MessageBox.show("Dialog is already created ");
@@ -284,6 +289,10 @@ export default class Book extends Controller {
 
         //modelOData.submitChanges(); 
         modelOData.refresh(true)
+    }
+    public onSmartBooksTable() {
+        var r = UIComponent.getRouterFor(this)
+        r.navTo('RouteSmartBookTable')
     }
     public async onImportBooksSync() {
 

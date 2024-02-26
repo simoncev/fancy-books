@@ -17,7 +17,7 @@
         },
         "dataSources": {
             "ZBOOKS_DETAILS_SRV": {
-                "uri": "/sap/opu/odata/sap/ZBOOKS_DETAILS_SRV",
+                "uri": "/sap/opu/odata/sap/ZBOOKS_DETAILS2_SRV",
                 "type": "OData",
                 "settings": {
                     "annotations": [],
@@ -25,16 +25,14 @@
                     "odataVersion": "2.0"
                 }
             },
-            
             "annotation": {
                 "type": "ODataAnnotation",
                 "uri": "annotations/annotation.xml",
                 "settings": {
-                  "localUri": "annotations/annotation.xml"
+                    "localUri": "annotations/annotation.xml"
                 }
-              }
+            }
         }
-        
     },
     "sap.ui": {
         "technology": "UI5",
@@ -90,10 +88,22 @@
                     }
                 }
             },
+            "": {
+                "dataSource": "ZBOOKS_DETAILS_SRV",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": true,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
             "bookslocal": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/bookslocal.json"
-			}
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/bookslocal.json"
+            }
         },
         "resources": {
             "css": [
@@ -126,6 +136,20 @@
                     "target": [
                         "TargetCreateBook"
                     ]
+                },
+                {
+                    "name": "RouteCreateBookSmart",
+                    "pattern": "createsmartbook",
+                    "target": [
+                        "TargetCreateBookSmart"
+                    ]
+                },
+                {
+                    "name": "RouteSmartBookTable",
+                    "pattern": "smartbooktable",
+                    "target": [
+                        "TargetSmartBookTable"
+                    ]
                 }
             ],
             "targets": {
@@ -136,14 +160,27 @@
                     "viewId": "Book",
                     "viewName": "Book"
                 },
+                "TargetSmartBookTable": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "SmartBookTable",
+                    "viewName": "SmartBookTable"
+                },
                 "TargetCreateBook": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
                     "viewId": "CreateBook",
                     "viewName": "CreateBook"
+                },
+                "TargetCreateBookSmart": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "CreateBookSmart",
+                    "viewName": "CreateBookSmart"
                 }
-
             }
         },
         "rootView": {

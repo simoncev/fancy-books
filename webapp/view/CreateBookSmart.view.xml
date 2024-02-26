@@ -1,0 +1,71 @@
+<mvc:View
+    xmlns:smf="sap.ui.comp.smartfield"
+    xmlns:form="sap.ui.comp.smartform"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    controllerName="com.spaiens.fancybook.controller.CreateBookSmart"
+    displayBlock="true"
+>
+    <Page
+        id="pageCreateBookSmart"
+        title="Page title:: {i18n>createbooktitle} (SmartForm tag) "
+    >
+        <form:SmartForm
+            id="idSmartForm"
+            editable="false"
+            editTogglable="true"
+            title="Паметна форма со валидатори"
+            checkButton="true"
+        >
+            <form:layout>
+                <form:ColumnLayout
+                    emptyCellsLarge="4"
+                    labelCellsLarge="4"
+                    columnsM="1"
+                    columnsL="1"
+                    columnsXL="1"
+                />
+            </form:layout>
+            <form:Group id="idGroupSmart">
+                <form:GroupElement label="Book Name">
+                    <smf:SmartField
+                        value="{Name}"
+                        id="idName"
+                        textLabel="Name"
+                        showLabel="true"
+                    />
+                </form:GroupElement>
+                <form:GroupElement label="Book Edition">
+                    <smf:SmartField
+                        value="{Name}"
+                        id="idEdition"
+                        textLabel="Edition"
+                        showLabel="true"
+                    />
+                </form:GroupElement>
+                <form:GroupElement label="Author">
+                    <smf:SmartField
+                        value="{Author}"
+                        id="idAuthor"
+                        textLabel="Author"
+                        showLabel="true"
+                    />
+                </form:GroupElement>
+
+                <form:GroupElement label="Book price">
+                    <smf:SmartField
+                        value="{Book_price}"
+                        id="idPrice"
+                    />
+                </form:GroupElement>
+                <form:GroupElement label="Book currency">
+                    <smf:SmartField
+                        value="{Book_currency}"
+                        id="idCurrency"
+                    />
+                </form:GroupElement>
+            </form:Group>
+        </form:SmartForm>
+    </Page>
+</mvc:View>
