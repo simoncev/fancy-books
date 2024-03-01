@@ -6,12 +6,13 @@
     displayBlock="true"
     id="viewBook"
     xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
-	xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartTable="sap.ui.comp.smarttable"
 >
     <Page
         id="pageSmartBookList"
         title="Smart Book List"
     >
+        <Button id="toggleLiveMode" text="Change to 'LiveMode'" press="toggleLiveMode"/>
         <content>
             <smartFilterBar:SmartFilterBar
                 id="smartFilterBar"
@@ -22,6 +23,7 @@
                         key="Name"
                         visibleInAdvancedArea="true"
                         preventInitialDataFetchInValueHelpDialog="false"
+                        
                     />
                 </smartFilterBar:controlConfiguration>
             </smartFilterBar:SmartFilterBar>
@@ -38,7 +40,15 @@
                 enableExport="true"
                 enableAutoBinding="true"
                 initiallyVisibleFields="Name,Author"
-            />
+            >
+                <Table
+                    mode="MultiSelect"
+                    growingThreshold="100"
+                    growing="true"
+                    growingScrollToLoad="true"
+                    selectionChange="onSelectionChange"
+                />
+            </smartTable:SmartTable>
         </content>
     </Page>
 </mvc:View>

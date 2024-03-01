@@ -35,7 +35,7 @@
                     <PropertyRef Name="Edition"/>
                 </Key>
                 <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100"/>
-                <Property Name="Edition" Type="Edm.Byte" Nullable="true"/>
+                <Property Name="Edition" Type="Edm.Byte" Nullable="false"/>
                 <Property Name="Author" Type="Edm.String" MaxLength="100"/>
                 <Property Name="Link" Type="Edm.String" MaxLength="255"/>
                 <Property Name="Book_price" Type="Edm.Decimal" Precision="11" Scale="3"/>

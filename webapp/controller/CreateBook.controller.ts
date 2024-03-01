@@ -1,4 +1,5 @@
 import MessageBox from "sap/m/MessageBox";
+import SmartField from "sap/ui/comp/smartfield/SmartField";
 import Controller from "sap/ui/core/mvc/Controller";
 import View from "sap/ui/core/mvc/View";
 import JSONModel from "sap/ui/model/json/JSONModel";
@@ -36,7 +37,8 @@ export default class CreateBook extends Controller{
             Book_price: price,
             Book_currency: currency
 
-        }
+        };
+      
         modelOData.create('/ZBOOKS1Set', newBook,  {
             success: function(){
                 MessageBox.alert("success")
@@ -46,4 +48,5 @@ export default class CreateBook extends Controller{
         });
        modelOData.refresh(true)
     }
+   
 }

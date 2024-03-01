@@ -1,3 +1,4 @@
+import ListReport from "sap/fe/test/ListReport";
 import Button, { $ButtonSettings } from "sap/m/Button";
 import ComboBox, { $ComboBoxSettings } from "sap/m/ComboBox";
 import ComboBoxTextField from "sap/m/ComboBoxTextField";
@@ -10,6 +11,7 @@ import Panel from "sap/m/Panel";
 import SearchField from "sap/m/SearchField";
 import Table from "sap/m/Table";
 import EventProvider from "sap/ui/base/EventProvider";
+import ComponentContainer from "sap/ui/core/ComponentContainer";
 import Item from "sap/ui/core/Item";
 import UIComponent from "sap/ui/core/UIComponent";
 import Controller from "sap/ui/core/mvc/Controller";
@@ -21,6 +23,8 @@ import Model from "sap/ui/model/Model";
 import Sorter from "sap/ui/model/Sorter";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
+import CreateBook from "./CreateBook.controller";
+import jQuery from "sap/ui/thirdparty/jquery";
 
 
 
@@ -43,9 +47,7 @@ export default class Book extends Controller {
         } //download link, order undefined
         let guiModel = new JSONModel(data)
         oView.setModel(guiModel, "bookModel")
-
-
-
+        
     }
     public onSearch(): void {
         var oView: any = this.getView() as View;
@@ -309,6 +311,15 @@ export default class Book extends Controller {
         }
 
         modelOData.refresh(true)
+    }
+
+    public onGenericBooksTable(){
+        var r = UIComponent.getRouterFor(this)
+        r.navTo('RouteGenericBookTable')
+  
+       
+      
+
     }
 
     private async saveBook(book: any, modelOData: ODataModel) {

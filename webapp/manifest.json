@@ -20,7 +20,9 @@
                 "uri": "/sap/opu/odata/sap/ZBOOKS_DETAILS2_SRV",
                 "type": "OData",
                 "settings": {
-                    "annotations": [],
+                    "annotations": [
+                        "annotation"
+                    ],
                     "localUri": "localService/ZBOOKS_DETAILS_SRV/metadata.xml",
                     "odataVersion": "2.0"
                 }
@@ -52,6 +54,7 @@
     },
     "sap.ui5": {
         "flexEnabled": false,
+        "handleValidation": true,
         "dependencies": {
             "minUI5Version": "1.120.5",
             "libs": {
@@ -110,7 +113,8 @@
                 {
                     "uri": "css/style.css"
                 }
-            ]
+            ],
+            "mockserver": "mockserver"
         },
         "routing": {
             "config": {
@@ -150,6 +154,13 @@
                     "target": [
                         "TargetSmartBookTable"
                     ]
+                },
+                {
+                    "name": "RouteGenericBookTable",
+                    "pattern": "genericbooktable",
+                    "target": [
+                        "TargetGenericBookTable"
+                    ]
                 }
             ],
             "targets": {
@@ -180,6 +191,13 @@
                     "clearControlAggregation": false,
                     "viewId": "CreateBookSmart",
                     "viewName": "CreateBookSmart"
+                },
+                "TargetGenericBookTable": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "ListBookReport",
+                    "viewName": "ListBookReport"
                 }
             }
         },
@@ -188,6 +206,18 @@
             "type": "XML",
             "async": true,
             "id": "App"
+        },
+        "componentUsages": {
+            "report.com.sapiens.fiori": {
+                "name": "fancybookplan",
+                "settings": {},
+                "componentData": {},
+                "lazy": false
+            }
+        },
+        "resourceRoots": {
+            "fancybookplan": "com.sapiens.fiori/webapp"
         }
     }
+    
 }

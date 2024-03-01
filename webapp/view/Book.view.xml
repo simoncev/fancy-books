@@ -27,6 +27,11 @@
                     <OverflowToolbar>
                         <content>
                             <ToolbarSpacer />
+                             <Button
+                                id="idGenericTable"
+                                text="Generic Book Table"
+                                press=".onGenericBooksTable"
+                            />
                             <Button
                                 id="idSmartTable"
                                 text="Smart Book Table"
