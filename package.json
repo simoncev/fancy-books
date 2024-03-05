@@ -15,6 +15,7 @@
     "@sapui5/types": "~1.120.0",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
+    "@sapui5/sap.fe.macros":"1.121.0",
     "@ui5/cli": "^3.7.0",
     "typescript": "^5.1.6",
     "ui5-control-generator": "^1.0.4",
@@ -39,6 +40,7 @@
   },
   "sapuxLayer": "CUSTOMER_BASE",
   "dependencies": {
+    "@sapui5/sap.fe.macros": "^1.121.0",
     "@ui5/ts-interface-generator": "^0.8.1"
   }
 }

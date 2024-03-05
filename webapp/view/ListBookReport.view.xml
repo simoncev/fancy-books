@@ -1,6 +1,7 @@
 <mvc:View
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:macros="sap.fe.macros"
     xmlns="sap.m"
     xmlns:html="http://www.w3.org/1999/xhtml"
     controllerName="com.spaiens.fancybook.controller.ListBookReport"
@@ -9,14 +10,7 @@
 >
     <Page>
         <content>
-            <core:ComponentContainer
-                autoPrefixId="true"
-                settings="{id: 'embeddedListReport'}"
-                usage="report.com.sapiens.fiori"
-                manifest="true"
-                height="100%"
-                async="true"
-            />
+            <macros:Table  metaPath="ZBOOKS1Set"/>
         </content>
     </Page>
 </mvc:View>

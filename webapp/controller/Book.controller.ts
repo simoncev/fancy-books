@@ -25,6 +25,8 @@ import JSONModel from "sap/ui/model/json/JSONModel";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 import CreateBook from "./CreateBook.controller";
 import jQuery from "sap/ui/thirdparty/jquery";
+import Event from "sap/ui/base/Event";
+import Context from "sap/ui/model/Context";
 
 
 
@@ -338,5 +340,14 @@ export default class Book extends Controller {
                 return false;
             }
         });
+    }
+    public onLineItemPress(event: Event) {
+        var r = UIComponent.getRouterFor(this)
+        let source : any  = event.getSource() 
+        let _context : Context = source.getBindingContext("books") as Context
+        let _name: string =  (_context.getObject() as any).Name
+        r.navTo('RouteBookDetails', {
+            Name:_name
+        })
     }
 }

@@ -1,0 +1,10 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    controllerName="com.spaiens.fancybook.controller.BookDetails"
+    displayBlock="true"
+    id="viewBookDetails"
+>
+    <Page title="Book Details"></Page>
+</mvc:View>

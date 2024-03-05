@@ -12,7 +12,11 @@
         id="pageSmartBookList"
         title="Smart Book List"
     >
-        <Button id="toggleLiveMode" text="Change to 'LiveMode'" press="toggleLiveMode"/>
+        <Button
+            id="toggleLiveMode"
+            text="Change to 'LiveMode'"
+            press="toggleLiveMode"
+        />
         <content>
             <smartFilterBar:SmartFilterBar
                 id="smartFilterBar"
@@ -23,7 +27,6 @@
                         key="Name"
                         visibleInAdvancedArea="true"
                         preventInitialDataFetchInValueHelpDialog="false"
-                        
                     />
                 </smartFilterBar:controlConfiguration>
             </smartFilterBar:SmartFilterBar>
@@ -41,6 +44,36 @@
                 enableAutoBinding="true"
                 initiallyVisibleFields="Name,Author"
             >
+                <smartTable:customToolbar>
+                    <OverflowToolbar design="Transparent">
+                        <ToolbarSpacer />
+                        <OverflowToolbarButton
+                            icon="sap-icon://activate"
+                            tooltip="Apply UI state changes"
+                            press="applyUiState"
+                        />
+                        <OverflowToolbarButton
+                            icon="sap-icon://delete"
+                            tooltip="Delete Selected"
+                            text="Delete Selected"
+                            press="onDeleteSelectedRows"
+                        />
+                        <OverflowToolbarButton
+                            icon="sap-icon://sort"
+                            tooltip="Sort"
+                            text="Sort"
+                            press="onSort"
+                        />
+                        <OverflowToolbarButton
+                            icon="sap-icon://filter"
+                            tooltip="Filter"
+                            text="Filter"
+                            press="onFilter"
+                        />
+                        
+                        
+                    </OverflowToolbar>
+                </smartTable:customToolbar>
                 <Table
                     mode="MultiSelect"
                     growingThreshold="100"

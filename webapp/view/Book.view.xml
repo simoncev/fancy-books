@@ -19,7 +19,7 @@
                 growingThreshold="100"
                 growingScrollToLoad="false"
                 growing="true"
-                mode="SingleSelectMaster"
+                mode="MultiSelect"
                 selectionChange=".onSelectionChange"
                 alternateRowColors="false"
             >
@@ -82,8 +82,7 @@
                     </OverflowToolbar>
                 </headerToolbar>
                 <items>
-                    <ColumnListItem
-                        type="Active"
+                    <ColumnListItem type="Navigation" press="onLineItemPress"
                         id="item0"
                     >
                         <cells>
@@ -119,14 +118,11 @@
                             />
                             
                            
-                            <Text
-                                text="{books>Book_price}"
-                                id="idPrice"
+                            <ObjectNumber
+                                number="{books>Book_price}"
+                                unit="{books>Book_currency}"
                             />
-                            <Text
-                                text="{books>Book_currency}"
-                                id="idCurrency"
-                            />
+                            
                         </cells>
                     </ColumnListItem>
                 </items>
@@ -178,7 +174,7 @@
                     <Column
                         id="column4"
                         visible="{=${bookModel>/ui/download} === true}"
-                        width="40%"
+                        width="100%"
                     >
                         <header>
                             <Label
@@ -190,7 +186,7 @@
                     
                     <Column
                         id="column5"
-                        width="10%"
+                        width="20%"
                     >
                         <header>
                             <Label
@@ -199,17 +195,7 @@
                             />
                         </header>
                     </Column>
-                    <Column
-                        id="column6"
-                        width="10%"
-                    >
-                        <header>
-                            <Label
-                                text="Currency"
-                                id="label6"
-                            />
-                        </header>
-                    </Column>
+                    
                 </columns>
             </Table>
         </content>

@@ -135,6 +135,13 @@
                     ]
                 },
                 {
+                    "name": "RouteBookDetails",
+                    "pattern": "bookdetails/{Name}",
+                    "target": [
+                        "TargetBookDetails"
+                    ]
+                },
+                {
                     "name": "RouteCreateBook",
                     "pattern": "createbook",
                     "target": [
@@ -170,6 +177,13 @@
                     "clearControlAggregation": false,
                     "viewId": "Book",
                     "viewName": "Book"
+                },
+                "TargetBookDetails": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "BookDetails",
+                    "viewName": "BookDetails"
                 },
                 "TargetSmartBookTable": {
                     "viewType": "XML",
@@ -217,6 +231,41 @@
         },
         "resourceRoots": {
             "fancybookplan": "com.sapiens.fiori/webapp"
+        }
+
+    },
+    "sap.ui.generic.app": {
+        "_version": "1.3.0",
+        "settings": {
+            "forceGlobalRefresh": false,
+            "objectPageHeaderType": "Dynamic",
+            "considerAnalyticalParameters": true,
+            "showDraftToggle": false
+        },
+        "pages": {
+            "ListReport|ZBOOKS1Set": {
+                "entitySet": "ZBOOKS1Set",
+                "component": {
+                    "name": "sap.suite.ui.generic.template.ListReport",
+                    "list": true,
+                    "settings": {
+                        "initiallyVisibleFields": [
+                            "Name",
+                            "Author"
+                        ],
+                        "smartVariantManagement": true,
+                        "isWorklist": true,
+                        "filterSettings": {
+                            "dateSettings": {
+                                "useDateRange": true
+                            }
+                        },
+                        "tableSettings": {
+                            "multiSelect": true
+                        }
+                    }
+                }
+            }
         }
     }
     

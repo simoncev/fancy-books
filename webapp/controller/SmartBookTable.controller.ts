@@ -1,28 +1,13 @@
-import Button, { $ButtonSettings } from "sap/m/Button";
-import ComboBox, { $ComboBoxSettings } from "sap/m/ComboBox";
-import ComboBoxTextField from "sap/m/ComboBoxTextField";
-import Dialog, { $DialogSettings } from "sap/m/Dialog";
-import Input from "sap/m/Input";
-import Label from "sap/m/Label";
+import Button from "sap/m/Button";
+import ListItemBase from "sap/m/ListItemBase";
 import MessageBox from "sap/m/MessageBox";
-import MessageToast from "sap/m/MessageToast";
-import Panel from "sap/m/Panel";
-import SearchField from "sap/m/SearchField";
 import Table from "sap/m/Table";
 import Event from "sap/ui/base/Event";
-import EventProvider from "sap/ui/base/EventProvider";
 import SmartFilterBar from "sap/ui/comp/smartfilterbar/SmartFilterBar";
-import Item from "sap/ui/core/Item";
-import UIComponent from "sap/ui/core/UIComponent";
+import SmartTable from "sap/ui/comp/smarttable/SmartTable";
 import Controller from "sap/ui/core/mvc/Controller";
-import View from "sap/ui/core/mvc/View";
-import Filter from "sap/ui/model/Filter";
-import FilterOperator from "sap/ui/model/FilterOperator";
-import FilterType from "sap/ui/model/FilterType";
-import Model from "sap/ui/model/Model";
-import Sorter from "sap/ui/model/Sorter";
-import JSONModel from "sap/ui/model/json/JSONModel";
-import ODataModel from "sap/ui/model/odata/v2/ODataModel";
+import Context from "sap/ui/model/Context";
+
 
 
 
@@ -32,10 +17,12 @@ import ODataModel from "sap/ui/model/odata/v2/ODataModel";
  */
 export default class SmartBookTable extends Controller {
     smartFilterBar: SmartFilterBar
+    smartTable: SmartTable
 
     /*eslint-disable @typescript-eslint/no-empty-function*/
     public onInit(): void {
         this.smartFilterBar = this.byId("smartFilterBar") as SmartFilterBar;
+        this.smartTable = this.byId("smartTable_ResponsiveTable") as SmartTable;
     }
     public onSelectionChange(event: Event): void {
         //MessageBox.show(event.getSource().toString())
@@ -51,6 +38,30 @@ export default class SmartBookTable extends Controller {
         }
 
         this.smartFilterBar.setLiveMode(!bLiveMode);
+    }
+    public onSort(): void {
+        var oSmartTable = this.smartTable;
+        if (oSmartTable) {
+            oSmartTable.openPersonalisationDialog("Sort");
+        }
+    }
+
+    public onFilter():void {
+        var oSmartTable = this.smartTable;
+        if (oSmartTable) {
+            oSmartTable.openPersonalisationDialog("Filter");
+        }
+    }
+    public onDeleteSelectedRows():void{
+        var oSmartTable: SmartTable = this.smartTable as SmartTable;
+        var table: Table = oSmartTable.getTable() as Table 
+        let items: Context[] =  table.getSelectedContexts()
+      for (var i=items.length -1; i>=0; i--) {
+            MessageBox.show(items[i].toString())  
+       
+      }
+    
+      
     }
 
 }
